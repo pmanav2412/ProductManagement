@@ -16,26 +16,28 @@
 <%  
     //ProductService  ps = new ProductService();
     ArrayList<Product> List = services.viewAll();
+    System.out.println("This is my list"+List);
     if(List != null && List.size()> 0){
 
 %>
-    <table>
+    <table class="table">
         <tr>
-        <th>ID</th>
-        <th>Product</th>
-        <th>price</th>
-        <th>seller</th>
+        <th scope="col">ID</th>
+        <th scope="col">Product</th>
+        <th scope="col">price</th>
+        <th scope="col">seller</th>
         </tr>
  <%
        for(Product p:List){
     
  %> 
  		<tr>
-        <th><%= p.getId() %></th>
+        <th scope="row"><%= p.getId() %></th>
         <th><%= p.getName() %></th>
         <th><%= p.getPrice() %></th>
         <th><%= p.getSeller() %></th>
-        <th><a href=<%="Delete.jsp?Id=" + p.getId()%>>Delete</a></th>
+        <th><a href=<%="Delete.jsp?Id=" + p.getId()%> style="color: red;">Delete</a></th>
+         <th><a href=<%="Update.jsp?Id=" + p.getId()%> style="color: blue;">Update</a></th>
         </tr>
     <%
       
