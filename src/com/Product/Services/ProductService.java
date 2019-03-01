@@ -14,7 +14,7 @@ public class ProductService {
      public ProductService() {
     	 try {
     	 Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Product", "root", "rootroot");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Product", "root", "root");
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
