@@ -29,7 +29,7 @@ double d = product.getPrice();
   
   <div class="form-group">
     <label for="formGroupExampleInput">Product Name</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="<%=product.getName() %>" name="name" style="width: 50%;">
+    <input type="text" class="form-control" id="formGroupExampleInput" value="<%=product.getName() %>" name="name" style="width: 50%;">
   </div>
   
   <div class="form-group">
